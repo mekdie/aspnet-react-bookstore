@@ -18,6 +18,22 @@ function App() {
     );
     setBooksList(searchFilter);
   }, [search]);
+
+  const reserveBook = (id) => {
+    //reserve book here and changed the reserved value to true
+    const bookingId = crypto.randomUUID();
+    alert(`Book ${id} reserved. Booking ID: ${bookingId}`);
+    const index = booksList.findIndex((book) => book.id === id);
+
+    const copy = [...booksList]; //make a copy
+    copy[index] = {
+      ...books[index],
+      ...{ reserved: true, bookingId: bookingId },
+    }; //update the value using es6 spread operator
+    console.log(copy);
+    setBooksList(copy);
+  };
+
   return (
     <div className="App">
       <Container className="no-padding">
@@ -52,7 +68,12 @@ function App() {
                   <td>{book.name}</td>
                   <td>{book.reserved ? "Yes" : "No"}</td>
                   <td>
-                    <Button variant="primary">Reserve</Button>{" "}
+                    <Button
+                      onClick={() => reserveBook(book.id)}
+                      variant="primary"
+                    >
+                      Reserve
+                    </Button>{" "}
                     <Button variant="danger">Cancel</Button>
                   </td>
                 </tr>
