@@ -70,9 +70,10 @@ function App() {
                   <td>
                     <Button
                       onClick={() => reserveBook(book.id)}
-                      variant="primary"
+                      variant={book.reserved ? "secondary" : "primary"}
+                      disabled={book.reserved ? true : false}
                     >
-                      Reserve
+                      {book.reserved ? "Reserved" : "Reserve"}
                     </Button>{" "}
                     <Button variant="danger">Cancel</Button>
                   </td>
