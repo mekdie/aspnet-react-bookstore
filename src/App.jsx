@@ -3,11 +3,37 @@ import { books } from "./data/MockData";
 import { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function App() {
   const [booksList, setBooksList] = useState(books);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    console.log(search);
+    let searchFilter = books.filter((book) =>
+      book.name.toLowerCase().includes(search.toLowerCase())
+    );
+    setBooksList(searchFilter);
+  }, [search]);
   return (
     <div className="App">
+      <Container className="no-padding">
+        <Row>
+          <Col>
+            <input
+              onChange={(e) => setSearch(e.target.value)}
+              value={search}
+              className="form-control mr-sm-4"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </Col>
+        </Row>
+      </Container>
+      <br />
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
