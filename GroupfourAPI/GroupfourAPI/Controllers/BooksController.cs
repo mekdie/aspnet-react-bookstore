@@ -38,6 +38,52 @@ namespace GroupfourAPI.Controllers
         {
            
             return Ok(books);
-        }   
+        }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<List<Book>>> Get(string id)
+        {
+            var book = books.Find(book => String.Equals(book.Id, id));
+            if (book == null)
+            {
+                return BadRequest("Book not found.");
+            }
+
+            return Ok(book);
+        }
+
+
+        [HttpPost]
+        public async Task<ActionResult<List<Book>>> AddBook(Book book)
+        {
+            books.Add(book);
+            return Ok(books);
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<List<Book>>> UpdateBook(Book request)
+        {
+            var book = books.Find(book => String.Equals(book.Id, request.Id));
+            if (book == null)
+            {
+                return BadRequest("Book not found.");
+            }
+            book.Id = request.Id;
+            book.Name = request.Name;
+            book.Reserved = request.Reserved;
+            book.BookingId = request.BookingId;
+            return Ok(books);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<List<Book>>> Delete(String id)
+        {
+            var book = books.Find(book => String.Equals(book.Id, id));
+            if (book == null)
+            {
+                return BadRequest("Book not found.");
+            }
+            books.Remove(book);
+            return Ok(books);
+        }
     }
 }

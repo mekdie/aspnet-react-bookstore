@@ -5,7 +5,7 @@
         public string Id { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
 
-        public bool Reserved { get; set; }
+        public bool Reserved { get; set; } = false;
 
         public string BookingId { get; set; } = string.Empty;
     }
