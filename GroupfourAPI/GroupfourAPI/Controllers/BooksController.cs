@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GroupfourAPI.Data;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Xml.Linq;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -32,12 +34,21 @@ namespace GroupfourAPI.Controllers
                 }
 
             };
+        private readonly DataContext context;
+
+        //constructor
+        public BooksController(DataContext context)
+        {
+            this.context = context;
+        }
+
         // GET: api/<BooksController>
         [HttpGet]
         public async Task<ActionResult<List<Book>>> Get()
         {
            
-            return Ok(books);
+           // return Ok(books); //return the mock data from above
+            return Ok(await context.Books.ToListAsync()); //change to get from database
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<List<Book>>> Get(string id)
