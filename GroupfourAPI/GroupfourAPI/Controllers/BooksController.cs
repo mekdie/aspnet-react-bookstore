@@ -10,6 +10,7 @@ namespace GroupfourAPI.Controllers
     public class BooksController : ControllerBase
     {
         private static List<Book> books = new List<Book>
+        //add initial data
             {
                 new Book {
                     Id = "9b0896fa-3880-4c2e-bfd6-925c87f22878",
@@ -19,7 +20,7 @@ namespace GroupfourAPI.Controllers
                 },
                 new Book {
                     Id= "0550818d-36ad-4a8d-9c3a-a715bf15de76",
-                    Name= "Visual Studio Tips",
+                    Name= "Visual Studio Tips from API",
                     Reserved= false,
                     BookingId= "",
                 },

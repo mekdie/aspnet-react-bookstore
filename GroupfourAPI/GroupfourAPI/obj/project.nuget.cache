@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B7DrPGWcShrR3vAW3wY/DAOKQ0kFPjv6Vlj1ladd9kj633I4aLhgLkioZDUKwLcvSXXppp+GKyJ7PR84Z17gsg==",
+  "dgSpecHash": "QyNy7v7CDPAqiLT3EXxhUticZlCftnig61sD24FMpriJgz+qUzXWkgCHwhi9uO7jrzOAMZsThWPfkwCxMiucUg==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\Group Four Building Surveyor\\GroupfourAPI\\GroupfourAPI\\GroupfourAPI.csproj",
+  "projectFilePath": "D:\\Programming\\Group Four Building Surveyor\\FullStack NET React\\GroupfourAPI\\GroupfourAPI\\GroupfourAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mcdon\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\mcdon\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

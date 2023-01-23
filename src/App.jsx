@@ -1,5 +1,5 @@
 import "./App.css";
-import { books } from "./data/MockData";
+// import { books } from "./data/MockData";
 import { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
@@ -9,25 +9,27 @@ import Col from "react-bootstrap/Col";
 
 const BackEndAPI = "https://localhost:7008/api/Books";
 
-async function fetchBooksAPI() {
-    const res = await fetch(BackEndAPI);
-    const data = (await res).json();
-    console.log(data);
-
-    return data;
-}
 function App() {
-    const [booksList, setBooksList] = useState(books);
+    const [booksOriginal, setBooksOriginal] = useState([]);
+    const [booksList, setBooksList] = useState([]);
     const [search, setSearch] = useState("");
 
+    async function fetchBooksAPI() {
+        const res = await fetch(BackEndAPI);
+        const data = await res.json();
+
+        setBooksList(data);
+        setBooksOriginal(data);
+    }
     useEffect(() => {
         fetchBooksAPI();
     }, []);
 
     useEffect(() => {
-        let searchFilter = books.filter((book) =>
+        let searchFilter = booksOriginal.filter((book) =>
             book.name.toLowerCase().includes(search.toLowerCase())
         );
+
         setBooksList(searchFilter);
     }, [search]);
 
@@ -39,7 +41,7 @@ function App() {
 
         const copy = [...booksList]; //make a copy
         copy[index] = {
-            ...books[index],
+            ...booksList[index],
             ...{ reserved: true, bookingId: bookingId },
         }; //update the value using es6 spread operator
         setBooksList(copy);
@@ -52,7 +54,7 @@ function App() {
 
         const copy = [...booksList]; //make a copy
         copy[index] = {
-            ...books[index],
+            ...booksList[index],
             ...{ reserved: false },
         }; //update the value using es6 spread operator
         setBooksList(copy);
@@ -121,7 +123,7 @@ function App() {
                         })}
                 </tbody>
             </Table>
-            {booksList.length === 0 && <h4>No books found</h4>}
+            {booksList.length === 0 && booksList && <h4>No books found</h4>}
         </div>
     );
 }

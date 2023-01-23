@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\Group Four Building Surveyor\\GroupfourAPI\\GroupfourAPI\\GroupfourAPI.csproj": {}
+    "D:\\Programming\\Group Four Building Surveyor\\FullStack NET React\\GroupfourAPI\\GroupfourAPI\\GroupfourAPI.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\Group Four Building Surveyor\\GroupfourAPI\\GroupfourAPI\\GroupfourAPI.csproj": {
+    "D:\\Programming\\Group Four Building Surveyor\\FullStack NET React\\GroupfourAPI\\GroupfourAPI\\GroupfourAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\Group Four Building Surveyor\\GroupfourAPI\\GroupfourAPI\\GroupfourAPI.csproj",
+        "projectUniqueName": "D:\\Programming\\Group Four Building Surveyor\\FullStack NET React\\GroupfourAPI\\GroupfourAPI\\GroupfourAPI.csproj",
         "projectName": "GroupfourAPI",
-        "projectPath": "D:\\Programming\\Group Four Building Surveyor\\GroupfourAPI\\GroupfourAPI\\GroupfourAPI.csproj",
+        "projectPath": "D:\\Programming\\Group Four Building Surveyor\\FullStack NET React\\GroupfourAPI\\GroupfourAPI\\GroupfourAPI.csproj",
         "packagesPath": "C:\\Users\\mcdon\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\Group Four Building Surveyor\\GroupfourAPI\\GroupfourAPI\\obj\\",
+        "outputPath": "D:\\Programming\\Group Four Building Surveyor\\FullStack NET React\\GroupfourAPI\\GroupfourAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mcdon\\AppData\\Roaming\\NuGet\\NuGet.Config",
