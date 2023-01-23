@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "B7DrPGWcShrR3vAW3wY/DAOKQ0kFPjv6Vlj1ladd9kj633I4aLhgLkioZDUKwLcvSXXppp+GKyJ7PR84Z17gsg==",
+  "success": true,
+  "projectFilePath": "D:\\Programming\\Group Four Building Surveyor\\GroupfourAPI\\GroupfourAPI\\GroupfourAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mcdon\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\mcdon\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\mcdon\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\mcdon\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\mcdon\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\mcdon\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -7,9 +7,22 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+const BackEndAPI = "https://localhost:7008/api/Books";
+
+async function fetchBooksAPI() {
+    const res = await fetch(BackEndAPI);
+    const data = (await res).json();
+    console.log(data);
+
+    return data;
+}
 function App() {
     const [booksList, setBooksList] = useState(books);
     const [search, setSearch] = useState("");
+
+    useEffect(() => {
+        fetchBooksAPI();
+    }, []);
 
     useEffect(() => {
         let searchFilter = books.filter((book) =>
