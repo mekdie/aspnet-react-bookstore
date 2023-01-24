@@ -1,4 +1,4 @@
-# GroupFour IT technical exercise
+# A simple bookstore App built with React (Front End) and ASP.NET (Back End) technical exercise
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
