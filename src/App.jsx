@@ -44,6 +44,21 @@ function App() {
             ...booksList[index],
             ...{ reserved: true, bookingId: bookingId },
         }; //update the value using es6 spread operator
+
+        //update the back end / db
+        fetch(BackEndAPI, {
+            method: "PUT",
+            headers: {
+                Accept: "application/json",
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(copy[index]),
+        })
+            .then((res) => res.json())
+            .then((result) => {
+                console.log(result);
+            });
+
         setBooksList(copy);
     };
 
@@ -57,6 +72,21 @@ function App() {
             ...booksList[index],
             ...{ reserved: false },
         }; //update the value using es6 spread operator
+
+        //update the back end / db
+        fetch(BackEndAPI, {
+            method: "PUT",
+            headers: {
+                Accept: "application/json",
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(copy[index]),
+        })
+            .then((res) => res.json())
+            .then((result) => {
+                console.log(result);
+            });
+
         setBooksList(copy);
     };
 
