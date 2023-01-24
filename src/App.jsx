@@ -70,7 +70,7 @@ function App() {
         const copy = [...booksList]; //make a copy
         copy[index] = {
             ...booksList[index],
-            ...{ reserved: false },
+            ...{ reserved: false, bookingId: "" },
         }; //update the value using es6 spread operator
 
         //update the back end / db
