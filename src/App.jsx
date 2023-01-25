@@ -7,6 +7,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+//back end API url
 const BackEndAPI = "https://localhost:7008/api/Books";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     const [booksList, setBooksList] = useState([]);
     const [search, setSearch] = useState("");
 
+    //fetch the API and set states
     async function fetchBooksAPI() {
         const res = await fetch(BackEndAPI);
         const data = await res.json();
@@ -25,6 +27,7 @@ function App() {
         fetchBooksAPI();
     }, []);
 
+    //search the book using title
     useEffect(() => {
         let searchFilter = booksOriginal.filter((book) =>
             book.name.toLowerCase().includes(search.toLowerCase())
@@ -33,6 +36,7 @@ function App() {
         setBooksList(searchFilter);
     }, [search]);
 
+    //reserve a book
     const reserveBook = (id) => {
         //reserve book here and changed the reserved value to true
         const bookingId = crypto.randomUUID();
